@@ -1,8 +1,87 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model RiseUp.Models.LandingDashboardViewModel
+@{
+    ViewData["Title"] = "RiseUp - Startup Ecosystem";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero Section -->
+<div class="bg-primary text-white text-center py-5 rounded-3 mb-4 shadow">
+    <div class="container py-3">
+        <h1 class="display-4 fw-bold">Empowering Next-Gen Startups</h1>
+        <p class="lead">Connect with visionary founders, active investors, and top mentors in one unified ecosystem.</p>
+        <div class="mt-4">
+            <a href="/Identity/Account/Register" class="btn btn-light btn-lg me-2 fw-semibold">Get Started</a>
+            <a href="#ideasSection" class="btn btn-outline-light btn-lg fw-semibold">Explore Ideas</a>
+        </div>
+    </div>
+</div>
+
+<!-- Stats Section -->
+<div class="row text-center mb-5">
+    <div class="col-md-3 col-6 mb-3">
+        <div class="card border-0 shadow-sm p-3">
+            <h3 class="text-primary fw-bold">@Model.TotalIdeasCount</h3>
+            <p class="text-muted mb-0">Startup Ideas</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 mb-3">
+        <div class="card border-0 shadow-sm p-3">
+            <h3 class="text-success fw-bold">@Model.TotalFoundersCount</h3>
+            <p class="text-muted mb-0">Founders</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 mb-3">
+        <div class="card border-0 shadow-sm p-3">
+            <h3 class="text-info fw-bold">@Model.TotalInvestorsCount</h3>
+            <p class="text-muted mb-0">Investors</p>
+        </div>
+    </div>
+    <div class="col-md-3 col-6 mb-3">
+        <div class="card border-0 shadow-sm p-3">
+            <h3 class="text-warning fw-bold">@Model.TotalMentorsCount</h3>
+            <p class="text-muted mb-0">Mentors</p>
+        </div>
+    </div>
+</div>
+
+<!-- Category Filters -->
+<div class="d-flex justify-content-between align-items-center mb-4" id="ideasSection">
+    <h2 class="fw-bold">Explore Startup Ideas</h2>
+    <div class="btn-group" role="group">
+        <a asp-action="Index" asp-route-category="All" class="btn btn-outline-secondary @(Model.SelectedCategory == "All" ? "active" : "")">All</a>
+        <a asp-action="Index" asp-route-category="AI" class="btn btn-outline-secondary @(Model.SelectedCategory == "AI" ? "active" : "")">AI</a>
+        <a asp-action="Index" asp-route-category="Fintech" class="btn btn-outline-secondary @(Model.SelectedCategory == "Fintech" ? "active" : "")">Fintech</a>
+        <a asp-action="Index" asp-route-category="EdTech" class="btn btn-outline-secondary @(Model.SelectedCategory == "EdTech" ? "active" : "")">EdTech</a>
+    </div>
+</div>
+
+<!-- Idea Cards Grid -->
+<div class="row">
+    @if (!Model.RecentIdeas.Any())
+    {
+        <div class="col-12 text-center py-5">
+            <p class="text-muted fs-5">No startup ideas published yet. Be the first founder to post!</p>
+        </div>
+    }
+    else
+    {
+        @foreach (var idea in Model.RecentIdeas)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-secondary">@idea.Category</span>
+                            <small class="text-muted">Goal: $@idea.FundingGoal.ToString("N0")</small>
+                        </div>
+                        <h5 class="card-title fw-bold">@idea.Title</h5>
+                        <p class="card-text text-muted small">@idea.Tagline</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 d-flex justify-content-between align-items-center pb-3">
+                        <small class="text-muted">By: @(idea.Founder?.FullName ?? "Unknown Founder")</small>
+                        <a href="/Startup/Details/@idea.Id" class="btn btn-sm btn-outline-primary">View Pitch</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
 </div>
