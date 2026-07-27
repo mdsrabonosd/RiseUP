@@ -11,10 +11,6 @@
       "RelativeMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|solutionrelative:riseup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Migrations\\20260726165721_srabon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:RiseUP\\Migrations\\20260726165721_srabon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|c:\\users\\user\\source\\repos\\riseup\\riseup\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|solutionrelative:riseup\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,6 +29,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|c:\\users\\user\\source\\repos\\riseup\\riseup\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|solutionrelative:riseup\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|c:\\users\\user\\source\\repos\\riseup\\riseup\\migrations\\20260726165721_srabon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3262166-1AE7-CCD5-4C7B-CB51361C29CC}|RiseUP\\RiseUP.csproj|solutionrelative:riseup\\migrations\\20260726165721_srabon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "20260726165721_srabon.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Migrations\\20260726165721_srabon.cs",
               "RelativeDocumentMoniker": "RiseUP\\Migrations\\20260726165721_srabon.cs",
@@ -67,12 +67,11 @@
               "RelativeToolTip": "RiseUP\\Migrations\\20260726165721_srabon.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:57:21.999Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:57:21.999Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "RiseUP\\Data\\ApplicationDbContext.cs",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "RiseUP\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAcwCMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:56:02.339Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:56:02.339Z"
             },
             {
               "$type": "Document",
@@ -93,12 +91,11 @@
               "RelativeToolTip": "RiseUP\\Program.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:53:22.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:53:22.895Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "ChatMessage.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Models\\ChatMessage.cs",
               "RelativeDocumentMoniker": "RiseUP\\Models\\ChatMessage.cs",
@@ -106,12 +103,11 @@
               "RelativeToolTip": "RiseUP\\Models\\ChatMessage.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAkwB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:51:19.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:51:19.038Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "StartupIdea.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Models\\StartupIdea.cs",
               "RelativeDocumentMoniker": "RiseUP\\Models\\StartupIdea.cs",
@@ -119,12 +115,11 @@
               "RelativeToolTip": "RiseUP\\Models\\StartupIdea.cs",
               "ViewState": "AgIAABkAAAAAAAAAAADwvyUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:50:42.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:50:42.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "RiseUP\\Models\\ApplicationUser.cs",
@@ -132,12 +127,11 @@
               "RelativeToolTip": "RiseUP\\Models\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T16:47:47.71Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T16:47:47.71Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\User\\source\\repos\\RiseUP\\RiseUP\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "RiseUP\\Controllers\\AdminController.cs",
@@ -145,8 +139,7 @@
               "RelativeToolTip": "RiseUP\\Controllers\\AdminController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-25T16:35:55.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-25T16:35:55.607Z"
             }
           ]
         }
