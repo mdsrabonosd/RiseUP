@@ -9,18 +9,19 @@
             <h3 class="fw-bold text-center mb-3">Welcome Back</h3>
             <p class="text-muted text-center mb-4">Log in to access your dashboard and ecosystem</p>
 
-            <form asp-action="Login" method="post">
+            <!-- Added autocomplete="off" on the form -->
+            <form asp-action="Login" method="post" autocomplete="off">
                 <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
                 <div class="mb-3">
                     <label asp-for="Email" class="form-label fw-semibold"></label>
-                    <input asp-for="Email" class="form-control" placeholder="name@example.com" />
+                    <input asp-for="Email" class="form-control" placeholder="name@example.com" autocomplete="off" />
                     <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
 
                 <div class="mb-3">
                     <label asp-for="Password" class="form-label fw-semibold"></label>
-                    <input asp-for="Password" class="form-control" />
+                    <input asp-for="Password" class="form-control" autocomplete="new-password" />
                     <span asp-validation-for="Password" class="text-danger"></span>
                 </div>
 
