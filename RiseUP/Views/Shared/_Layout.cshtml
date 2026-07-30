@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RiseUP</title>
-    <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/RiseUP.styles.css" asp-append-version="true" />
@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RiseUP</a>
+                <a class="navbar-brand fw-bold text-primary" asp-area="" asp-controller="Home" asp-action="Index">RiseUP</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,30 +27,38 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+
+                    <ul class="navbar-nav align-items-center">
                         @if (User.Identity != null && User.Identity.IsAuthenticated)
                         {
+                            <!-- Show Post Idea button for logged-in users -->
+                            <li class="nav-item me-2">
+                                <a class="btn btn-success btn-sm fw-semibold" asp-controller="Startup" asp-action="Create">+ Post Idea</a>
+                            </li>
                             <li class="nav-item me-2">
                                 <span class="nav-link text-dark fw-semibold">Hello, @User.Identity.Name!</span>
                             </li>
                             <li class="nav-item">
                                 <form asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
-                                    <button type="submit" class="btn btn-outline-danger btn-sm mt-1">Logout</button>
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
                                 </form>
                             </li>
                         }
                         else
                         {
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-dark fw-semibold" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-primary btn-sm fw-semibold" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
                         }
                     </ul>
                 </div>
-
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -58,10 +66,11 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
+        <div class="container text-center py-3">
             &copy; 2026 - RiseUP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

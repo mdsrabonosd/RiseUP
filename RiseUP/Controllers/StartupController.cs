@@ -18,7 +18,7 @@ namespace RiseUp.Controllers
             _userManager = userManager;
         }
 
-        // GET: /Startup/Create (Only accessible by authenticated Founders)
+        // GET: /Startup/Create
         [Authorize]
         [HttpGet]
         public IActionResult Create()
@@ -35,11 +35,11 @@ namespace RiseUp.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user == null) return Challenge();
 
-            // Set the logged-in user as Founder
+            // Link the logged-in user as the founder
             model.FounderId = user.Id;
             model.CreatedAt = DateTime.UtcNow;
 
-            // Remove Founder validation as it will be mapped via FounderId
+            // Remove navigation properties from validation state
             ModelState.Remove("Founder");
             ModelState.Remove("FounderId");
 
@@ -53,7 +53,7 @@ namespace RiseUp.Controllers
             return View(model);
         }
 
-        // GET: /Startup/Details/5 (View details of a specific pitch)
+        // GET: /Startup/Details/5
         [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
@@ -66,7 +66,7 @@ namespace RiseUp.Controllers
                 return NotFound();
             }
 
-            // Increment views counter
+            // Increment view counter on pitch view
             idea.ViewsCount++;
             await _context.SaveChangesAsync();
 

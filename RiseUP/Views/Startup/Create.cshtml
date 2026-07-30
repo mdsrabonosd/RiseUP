@@ -1,0 +1,63 @@
+﻿@model RiseUp.Models.StartupIdea
+@{
+    ViewData["Title"] = "Post a Startup Idea";
+}
+
+<div class="row justify-content-center my-5">
+    <div class="col-md-8">
+        <div class="card border-0 shadow-lg p-4">
+            <h3 class="fw-bold mb-3">Publish Your Startup Pitch</h3>
+            <p class="text-muted mb-4">Share your idea with potential investors and mentors in the ecosystem.</p>
+
+            <form asp-action="Create" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label fw-semibold">Startup Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="e.g. AI Noise Detector" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Tagline" class="form-label fw-semibold">Tagline (One-line Summary)</label>
+                    <input asp-for="Tagline" class="form-control" placeholder="e.g. Next-gen deepfake detection engine" />
+                    <span asp-validation-for="Tagline" class="text-danger"></span>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="Category" class="form-label fw-semibold">Category</label>
+                        <select asp-for="Category" class="form-select">
+                            <option value="AI">AI & Machine Learning</option>
+                            <option value="Fintech">Fintech</option>
+                            <option value="EdTech">EdTech</option>
+                            <option value="HealthTech">HealthTech</option>
+                            <option value="Cybersecurity">Cybersecurity</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="FundingGoal" class="form-label fw-semibold">Funding Goal ($)</label>
+                        <input asp-for="FundingGoal" class="form-control" placeholder="10000" />
+                        <span asp-validation-for="FundingGoal" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PitchDeckUrl" class="form-label fw-semibold">Pitch Deck Link / Document URL (Optional)</label>
+                    <input asp-for="PitchDeckUrl" class="form-control" placeholder="https://drive.google.com/..." />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="DetailedDescription" class="form-label fw-semibold">Detailed Pitch Description</label>
+                    <textarea asp-for="DetailedDescription" class="form-control" rows="5" placeholder="Explain the problem, solution, market size, and technology..."></textarea>
+                    <span asp-validation-for="DetailedDescription" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center mt-4">
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary fw-bold px-4">Publish Pitch</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
