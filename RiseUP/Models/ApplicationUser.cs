@@ -9,7 +9,7 @@ namespace RiseUp.Models
         Founder = 1,
         Investor = 2,
         Mentor = 3,
-        Admin = 4
+    
     }
 
     public class ApplicationUser : IdentityUser
